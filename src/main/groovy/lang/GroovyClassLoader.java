@@ -487,7 +487,7 @@ public class GroovyClassLoader extends URLClassLoader {
         }
 
         protected ClassCollector(ClassCollector col) {
-            this(col.cl, col.unit, col.su);
+            this((InnerLoader)col.cl, col.unit, col.su);
         }
 
         public GroovyClassLoader getDefiningClassLoader() {
